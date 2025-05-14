@@ -21,7 +21,7 @@ export const Keypad = () => {
 
       {/* Row 3 */}
       <Key type="tertiary" label="(-)" />
-      <Key type="tertiary" label="°'"" />
+      <Key type="tertiary" label="°′″" />
       <Key type="tertiary" label="hyp" />
       <Key type="tertiary" label="sin" />
       <Key type="tertiary" label="cos" />

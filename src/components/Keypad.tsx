@@ -4,7 +4,7 @@ import { Key } from './Key';
 
 export const Keypad = () => {
   return (
-    <div className="grid grid-cols-5 gap-1">
+    <div className="grid grid-cols-5 gap-2 w-full">
       {/* Row 1 */}
       <Key type="shift" label="SHIFT" />
       <Key type="function" label="Alpha" />

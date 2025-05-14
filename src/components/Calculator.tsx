@@ -2,29 +2,31 @@
 import React from 'react';
 import { Display } from './Display';
 import { Keypad } from './Keypad';
-import { useCalculator } from '@/hooks/useCalculator';
 import { CalculatorProvider } from '@/context/CalculatorContext';
 
 export const Calculator = () => {
   return (
     <CalculatorProvider>
-      <div className="flex flex-col w-full max-w-[360px] bg-[hsl(var(--calculator-body))] rounded-lg shadow-xl p-3 pb-1">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center">
-            <div className="bg-gray-400 h-4 w-10 rounded-sm mr-2"></div>
-            <span className="text-xs font-semibold text-gray-700">CASIO</span>
+      <div className="flex flex-col w-full max-w-[360px] bg-[#f0f0f0] rounded-md shadow-md border border-gray-300">
+        <div className="bg-[#006db3] text-white p-1 flex items-center justify-between rounded-t-md">
+          <span className="text-xs font-medium">Calculator</span>
+          <div className="flex gap-1">
+            <div className="w-4 h-4 flex items-center justify-center text-xs bg-gray-100 hover:bg-gray-300 rounded-sm">-</div>
+            <div className="w-4 h-4 flex items-center justify-center text-xs bg-gray-100 hover:bg-gray-300 rounded-sm">□</div>
+            <div className="w-4 h-4 flex items-center justify-center text-xs bg-red-400 hover:bg-red-500 rounded-sm">×</div>
           </div>
-          <span className="text-xs font-bold text-gray-700">fx-991ES PLUS</span>
         </div>
         
-        <Display />
-        
-        <div className="text-xs text-gray-600 flex justify-between mt-1 mb-1 px-2">
-          <span>NATURAL-V.P.A.M.</span>
-          <span>SCIENTIFIC CALCULATOR</span>
+        <div className="px-3 py-2">
+          <div className="flex items-center gap-2 text-xs text-gray-600 mb-1">
+            <span>View</span>
+            <span>Edit</span>
+            <span>Help</span>
+          </div>
+          
+          <Display />
+          <Keypad />
         </div>
-        
-        <Keypad />
       </div>
     </CalculatorProvider>
   );

@@ -12,15 +12,15 @@ interface KeyProps {
 export const Key = ({ label, type = 'primary', colspan = 1 }: KeyProps) => {
   const { handleKeyPress } = useCalculatorContext();
   
-  const baseStyles = "flex items-center justify-center rounded-md py-3 text-xs font-medium select-none transition-transform active:scale-95 cursor-pointer h-12";
+  const baseStyles = "flex items-center justify-center rounded-sm py-1.5 text-xs font-medium select-none transition-colors active:bg-gray-300 cursor-pointer h-8 border border-gray-300";
   
   const typeStyles = {
-    primary: "bg-[hsl(var(--calculator-key-primary))] text-gray-800 border border-gray-300",
-    secondary: "bg-[hsl(var(--calculator-key-secondary))] text-white",
-    tertiary: "bg-[hsl(var(--calculator-key-tertiary))] text-gray-800",
-    function: "bg-gray-200 text-gray-700 border border-gray-300",
-    shift: "bg-yellow-500 text-gray-800",
-    danger: "bg-[hsl(var(--calculator-key-accent))] text-white"
+    primary: "bg-white text-black hover:bg-gray-100",
+    secondary: "bg-white text-black hover:bg-gray-100",
+    tertiary: "bg-white text-black hover:bg-gray-100",
+    function: "bg-[#e9e9e9] text-black hover:bg-gray-200",
+    shift: "bg-[#e9e9e9] text-black hover:bg-gray-200",
+    danger: "bg-white text-black hover:bg-gray-100"
   };
   
   return (

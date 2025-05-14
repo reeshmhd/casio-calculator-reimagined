@@ -6,12 +6,12 @@ export const Display = () => {
   const { display, expression } = useCalculatorContext();
   
   return (
-    <div className="bg-[hsl(var(--calculator-display))] text-[hsl(var(--calculator-display-text))] p-3 rounded-md mb-2">
-      <div className="flex justify-end min-h-[20px] mb-1">
-        <span className="calculator-font text-xs opacity-80">{expression}</span>
+    <div className="bg-white border border-gray-300 rounded-sm p-2 mb-2 h-14 flex flex-col justify-end">
+      <div className="flex justify-end min-h-[20px]">
+        <span className="text-xs opacity-80 text-gray-600">{expression}</span>
       </div>
       <div className="flex justify-end items-center">
-        <span className="calculator-font text-2xl tracking-wider">{display}</span>
+        <span className="text-xl text-right font-medium font-mono">{display}</span>
       </div>
     </div>
   );
